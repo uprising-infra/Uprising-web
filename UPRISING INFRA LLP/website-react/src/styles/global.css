@@ -4124,3 +4124,25 @@ html.js .find-us-reveal.is-visible .find-us-caption { animation-delay: 1.95s; }
     transition: none !important;
   }
 }
+
+@media (max-width: 760px) {
+  .footer-col a {
+    display: inline-flex;
+    width: 100%;
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .numbers-hint {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer-bottom .c {
+    white-space: normal;
+  }
+}
