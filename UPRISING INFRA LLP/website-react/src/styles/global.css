@@ -4126,11 +4126,37 @@ html.js .find-us-reveal.is-visible .find-us-caption { animation-delay: 1.95s; }
 }
 
 @media (max-width: 760px) {
+  .site-footer {
+    padding-top: 36px;
+  }
+  .footer-grid {
+    gap: 24px;
+    padding-bottom: 24px;
+  }
+  .footer-brand p {
+    margin-top: 10px;
+  }
+  .footer-col h5 {
+    margin-bottom: 10px;
+  }
   .footer-col a {
     display: inline-flex;
     width: 100%;
     min-height: 44px;
+    margin-bottom: 0;
+    padding-bottom: 0;
     align-items: center;
+  }
+  .footer-col span {
+    margin-bottom: 8px;
+  }
+  .footer-grid > .footer-col:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+  }
+  .footer-grid > .footer-col:nth-child(2) h5 {
+    grid-column: 1 / -1;
   }
 
   .numbers-hint {
