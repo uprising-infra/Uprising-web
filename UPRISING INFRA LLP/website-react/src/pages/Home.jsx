@@ -340,7 +340,10 @@ export default function Home() {
             <span className="why-eyebrow">Why Choose Us</span>
             <h2 id="why-title" aria-label={why.heading}>
               {whyWords.map((word, wordIndex) => (
-                <span className="why-word-mask" key={`${wordIndex}-${word}`}><span className="why-word">{word}</span></span>
+                <Fragment key={`${wordIndex}-${word}`}>
+                  {wordIndex > 0 && ' '}
+                  <span className="why-word-mask"><span className="why-word">{word}</span></span>
+                </Fragment>
               ))}
             </h2>
           </header>
