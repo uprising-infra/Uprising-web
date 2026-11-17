@@ -1061,6 +1061,17 @@
     #about-company .company-detail-grid { grid-template-columns: minmax(0, 1fr); }
     #about-company .company-detail-copy { opacity: 1; transform: none; }
   }
+  @media (hover: none), (pointer: coarse) {
+    #about-company .company-detail-copy {
+      width: 44px;
+      height: 44px;
+      flex-basis: 44px;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: none;
+    }
+  }
   @media (max-width: 419px) {
     #about-company .company-detail-panel { padding: 18px; }
     #about-company .company-detail-box { gap: 12px; padding: 20px 16px; }
@@ -1178,7 +1189,9 @@
   }
   @media (max-width: 480px) {
     .about-hero-stats { gap: 8px; }
-    .about-hero-stats .mini-stat { padding: 14px 12px; border-radius: 16px; }
+    .about-hero-stats .mini-stat { padding: 8px 6px; border-radius: 16px; }
+    .about-hero-stats .mini-stat strong { font-size: clamp(22px, 7vw, 26px); }
+    .about-hero-stats .mini-stat > span { font-size: clamp(8px, 2.4vw, 10px); }
   }
   @media (prefers-reduced-motion: reduce) {
     .about-hero .pic {
@@ -2207,6 +2220,9 @@
       animation-name: mvCardInUp;
       animation-delay: 0s;
     }
+  }
+  @media (max-width: 480px) {
+    .mv .no { font-size: clamp(48px, 14vw, 64px); }
   }
   @media (prefers-reduced-motion: reduce) {
     .mv *,
